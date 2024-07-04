@@ -64,7 +64,7 @@
      const ongId = urlParams.get('ongId');
 
      if (campaignId && ongId) {
-       $.getJSON(`http://localhost:3000/ongs/${ongId}`, function(data) {
+       $.getJSON(`https://ti-bf0e.onrender.com/ongs/${ongId}`, function(data) {
          const campaign = data.campanhas.find(c => c.id == campaignId);
          if (campaign) {
            $('#campaignBanner').attr('src', 'data:image/png;base64,' + campaign.banner);
@@ -107,7 +107,7 @@
 
    function updateCampaignData(data) {
      $.ajax({
-       url: `http://localhost:3000/ongs/${data.id}`,
+       url: `https://ti-bf0e.onrender.com/ongs/${data.id}`,
        type: 'PUT',
        contentType: 'application/json',
        data: JSON.stringify(data),
