@@ -57,7 +57,7 @@
             };
     
             $.ajax({
-              url: 'http://localhost:3000/ongs/' + sessionStorage.getItem('userId'), 
+              url: 'https://ti-bf0e.onrender.com/ongs/' + sessionStorage.getItem('userId'), 
               type: 'GET',
               success: function(response) {
 
@@ -66,7 +66,7 @@
     
 
                 $.ajax({
-                  url: 'http://localhost:3000/ongs/' + sessionStorage.getItem('userId'),
+                  url: 'https://ti-bf0e.onrender.com/ongs/' + sessionStorage.getItem('userId'),
                   type: 'PATCH',
                   contentType: 'application/json',
                   data: JSON.stringify({
