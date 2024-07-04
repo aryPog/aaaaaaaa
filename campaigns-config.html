@@ -86,7 +86,7 @@
       const ongId = sessionStorage.getItem('userId');
 
       if (ongId) {
-        $.getJSON(`http://localhost:3000/ongs/${ongId}`, function(ong) {
+        $.getJSON(`https://ti-bf0e.onrender.com/ongs/${ongId}`, function(ong) {
           const campaignsList = $('#campaignsList');
           ong.campanhas.forEach(function(campaign) {
             let campaignCard = `
@@ -120,7 +120,7 @@
       if (index !== -1) {
         ong.campanhas.splice(index, 1);
         $.ajax({
-          url: `http://localhost:3000/ongs/${ongId}`,
+          url: `https://ti-bf0e.onrender.com/ongs/${ongId}`,
           type: 'PUT',
           contentType: 'application/json',
           data: JSON.stringify(ong),
