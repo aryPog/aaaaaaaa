@@ -102,7 +102,7 @@
         filterCampaigns();
       });
 
-      $.getJSON('http://localhost:3000/ongs?_embed=campanhas', function(data) {
+      $.getJSON('https://ti-bf0e.onrender.com/ongs?_embed=campanhas', function(data) {
         data.forEach(function(ong) {
           if (ong.campanhas) {
             ong.campanhas.forEach(function(campaign) {
