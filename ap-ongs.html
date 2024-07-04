@@ -43,7 +43,7 @@
     $(document).ready(function() {
       function fetchOngs() {
         $.ajax({
-          url: 'http://localhost:3000/ongs',
+          url: 'https://ti-bf0e.onrender.com/ongs',
           type: 'GET',
           success: function(data) {
             displayOngs(data);
@@ -75,7 +75,7 @@
 
       function filterOngs(searchTerm) {
         $.ajax({
-          url: 'http://localhost:3000/ongs',
+          url: 'https://ti-bf0e.onrender.com/ongs',
           type: 'GET',
           success: function(data) {
             const filteredOngs = data.filter(ong => ong.nome.toLowerCase().includes(searchTerm.toLowerCase()));
