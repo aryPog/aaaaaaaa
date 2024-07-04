@@ -75,7 +75,7 @@
         };
 
         $.ajax({
-        url: 'http://localhost:3000/users', 
+        url: 'https://ti-bf0e.onrender.com/users', 
         type: 'GET',
         success: function(response) {
             const user = response.find(user => user.email === loginData.email && user.pswd === loginData.pswd);
